@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 public class PlayerController : MonoBehaviour
 {
 
 
     Rigidbody2D rb;
+    [SerializeField] float speed = 5f;
+    [SerializeField] float jumpHeight = 5f;
 
     bool isGrounded = false;
+
+    float direction = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +26,30 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Move(direction);
     }
 
     
+    void Jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+    }
+
+
+    private void OnMove(InputValue moveVal)
+    {
+        float moveDirection = moveVal.Get<float>();
+        direction = moveDirection;
+        
+    }
+
+    private void Move(float x)
+    {
+        rb.velocity = new Vector2(x * speed, rb.velocity.y);
+
+    }
+
+
 
     private void OnCollisionStay2D(Collision2D collision)
     {
