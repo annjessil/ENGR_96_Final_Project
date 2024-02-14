@@ -10,9 +10,11 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb;
     [SerializeField] float speed = 5f;
-    [SerializeField] float jumpHeight = 5f;
 
     bool isGrounded = false;
+    // [SerializeField] float jumpHeight = 5f;
+
+
 
     float direction = 0f;
 
@@ -26,25 +28,23 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move(direction);
+       Move(direction);
     }
 
     
-    void Jump()
-    {
-        rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
-    }
-
+   
 
     private void OnMove(InputValue moveVal)
     {
-        float moveDirection = moveVal.Get<float>();
-        direction = moveDirection;
+        Vector2 moveDirection = moveVal.Get<Vector2>();
+        direction = moveDirection.x;
+        Debug.Log(moveDirection);
         
     }
 
     private void Move(float x)
     {
+
         rb.velocity = new Vector2(x * speed, rb.velocity.y);
 
     }
@@ -53,8 +53,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Vector3 norm = collision.GetContact(0).normal;
-        if (Vector3.Angle(norm, Vector3.up) < 45f)
+        Vector2 norm = collision.GetContact(0).normal;
+        if (Vector2.Angle(norm, Vector2.up) < 45f)
         {
             isGrounded = true;
         }
