@@ -5,7 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+<<<<<<< HEAD
   - Furniture
+=======
+  - Collectable
+>>>>>>> 3fc9744a35f19a3fc8b93433274122e0f0830c69
   layers:
   - Default
   - TransparentFX
