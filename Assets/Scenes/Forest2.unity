@@ -4954,6 +4954,7 @@ GameObject:
   - component: {fileID: 595806945}
   - component: {fileID: 595806944}
   - component: {fileID: 595806943}
+  - component: {fileID: 595806946}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5035,6 +5036,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &595806946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595806942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 590b4d63e646d644fb280b839889c68d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1462636617}
+  offset: {x: 0, y: 0, z: -10}
+  damping: 0.1
 --- !u!1 &770174847
 GameObject:
   m_ObjectHideFlags: 0
@@ -23536,6 +23552,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!4 &1462636617 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5393436429451824954, guid: 1e94c13dec08b4e8fa00c83531b4d1b3, type: 3}
+  m_PrefabInstance: {fileID: 1956813720}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1508304244
 GameObject:
   m_ObjectHideFlags: 0
@@ -29544,6 +29565,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1556441376800131523, guid: 1e94c13dec08b4e8fa00c83531b4d1b3, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 853334756645567786, guid: 1e94c13dec08b4e8fa00c83531b4d1b3, type: 3}
       propertyPath: m_SortingLayer
       value: 3
