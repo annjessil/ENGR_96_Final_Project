@@ -153,7 +153,7 @@ MonoBehaviour:
   speed: 3
   patrolDestination: 1
   chaseSpeed: 30
-  chaseDistance: 2
+  chaseDistance: 3
   loseDistance: 5
   isChasing: 0
 --- !u!61 &6705829560950556128
