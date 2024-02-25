@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3054452026941765866}
   - component: {fileID: 4721308091696755006}
   - component: {fileID: 4183265392372651965}
-  - component: {fileID: 5786454380291080013}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -113,58 +112,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!68 &5786454380291080013
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419894557427044997}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.68626416, y: 0.36817777}
-  - {x: 0.8500015, y: 0.24918205}
-  - {x: 0.9698429, y: -0.04845424}
-  - {x: 1.0513499, y: -0.35087565}
-  - {x: 0.9553969, y: -0.5681397}
-  - {x: 0.83578837, y: -0.8429517}
-  - {x: 0.56963164, y: -0.9560436}
-  - {x: 0.07223034, y: -1.0150677}
-  - {x: -0.36607873, y: -0.94783205}
-  - {x: -0.7029699, y: -0.6902699}
-  - {x: -0.8450712, y: -0.41353762}
-  - {x: -0.8556329, y: 0.03700027}
-  - {x: -0.6018064, y: 0.3356827}
-  - {x: 0.056203485, y: 0.5801904}
-  - {x: 0.39397335, y: 0.5430426}
-  - {x: 0.6679081, y: 0.40213597}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
