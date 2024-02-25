@@ -5,34 +5,40 @@ using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    public GameObject PointA;
-    public GameObject PointB;
     public GameObject Player;
     private Rigidbody2D rb;
     private Animator anim;
-    private Transform currentPoint;
     private Transform playerPos;
+    public Transform[] patrolPoints;
     public float speed;
+    public int patrolDestination;
     public float chaseSpeed;
     public float chaseDistance;
+    public float loseDistance;
     public bool isChasing;
     private Vector2 movement;
+    private Vector2 movementPoint;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        currentPoint = PointB.transform;
         playerPos = Player.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = playerPos.position - transform.position;
+        Vector3 directionPlayer = playerPos.position - transform.position;
+
         if (isChasing)
         {
+            if (directionPlayer.magnitude > loseDistance)
+            {
+                isChasing = false;
+            }
+
             if (transform.position.x < playerPos.position.x)
             {
                 transform.localScale = new Vector3(2, 2, 2);
@@ -41,8 +47,8 @@ public class EnemyPatrol : MonoBehaviour
             {
                 transform.localScale = new Vector3(-2, 2, 2);
             }
-            direction.Normalize();
-            movement = direction;
+            directionPlayer.Normalize();
+            movement = directionPlayer;
             moveCharacter(movement);
         }
         else
@@ -51,37 +57,35 @@ public class EnemyPatrol : MonoBehaviour
             {
                 isChasing = true;
             }
-             
-            if (currentPoint == PointB.transform)
-            {
-                rb.velocity = new Vector2(speed, 0);
 
-            }
-            else
+            if (patrolDestination == 0)
             {
-                rb.velocity = new Vector2(-speed, 0);
-            }
-
-            if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == PointB.transform)
-            {
-                flip();
-                currentPoint = PointA.transform;
-            }
-            if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == PointA.transform)
-            {
-                flip();
-                currentPoint = PointB.transform;
+                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, speed * Time.deltaTime);
+                if (Vector2.Distance(transform.position, patrolPoints[0].position) < .2f)
+                {
+                    transform.localScale = new Vector3(2, 2, 2);
+                    patrolDestination = 1;
+                }
             }
 
+            if (patrolDestination == 1)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, patrolPoints[1].position, speed * Time.deltaTime);
+                if (Vector2.Distance(transform.position, patrolPoints[1].position) < .2f)
+                {
+                    transform.localScale = new Vector3(-2, 2, 2);
+                    patrolDestination = 0;
+                }
+            }
         }
 
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(PointA.transform.position, 0.5f);
-        Gizmos.DrawWireSphere(PointB.transform.position, 0.5f);
-        Gizmos.DrawLine(PointA.transform.position, PointB.transform.position);
+        Gizmos.DrawWireSphere(patrolPoints[0].transform.position, 0.5f);
+        Gizmos.DrawWireSphere(patrolPoints[1].transform.position, 0.5f);
+        Gizmos.DrawLine(patrolPoints[0].transform.position, patrolPoints[1].transform.position);
     }
 
     private void flip()

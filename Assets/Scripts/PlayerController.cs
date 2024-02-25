@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
+    Animator anim;
     [SerializeField] float speed = 5f;
 
     Vector2 direction;
 
-    bool isGrounded = false;
+    // bool isGrounded = false;
     // [SerializeField] float jumpHeight = 5f;
 
     bool isFacingRight = true;
@@ -20,13 +22,14 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-       Move(direction);
+        Move(direction);
         if (isFacingRight && direction.x < 0 || (!isFacingRight && direction.x > 0))
         {
             Flip();
@@ -42,6 +45,7 @@ public class PlayerController : MonoBehaviour
     private void Move(Vector2 dir)
     {
         rb.velocity = new Vector2(dir.x * speed, dir.y * speed);
+        anim.SetBool("isRunning", dir.magnitude != 0);
     }
 
     private void Flip()
@@ -54,24 +58,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Vector2 norm = collision.GetContact(0).normal;
-        if (Vector2.Angle(norm, Vector2.up) < 45f)
+        if (collision.gameObject.tag == "Enemy")
         {
-            isGrounded = true;
-        }
-
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
-        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
