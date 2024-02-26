@@ -10,24 +10,20 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     [SerializeField] float speed = 5f;
-
     Vector2 direction;
-
-    // bool isGrounded = false;
-    // [SerializeField] float jumpHeight = 5f;
-
     bool isFacingRight = true;
+    public VectorValue startingPosition;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        transform.position = startingPosition.initialValue;
 
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         Move(direction);
         if (isFacingRight && direction.x < 0 || (!isFacingRight && direction.x > 0))
