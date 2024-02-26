@@ -9,15 +9,29 @@ public class SceneController : MonoBehaviour
 
     GameState state;
 
+    private void Start()
+    {
+        DialogueManager.Instance.OnShowDialogue += () =>
+        {
+            state = GameState.Dialog;
+        };
+        DialogueManager.Instance.OnHideDialogue += () =>
+        {
+            if (state == GameState.Dialog) 
+                state = GameState.FreeRoam;
+            
+        };
+    }
+
     private void Update()
     {
         if (state == GameState.FreeRoam)
         {
-            playerController.Update();
+            playerController.HandleUpdate();
 
         } else if (state == GameState.Dialog)
         {
-
+            DialogueManager.Instance.HandleUpdate();
         }
     }
 

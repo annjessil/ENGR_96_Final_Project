@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed = 5f;
     Vector2 direction;
     bool isFacingRight = true;
+    public LayerMask interactableLayer;
     public VectorValue startingPosition;
 
     void Start()
@@ -23,19 +24,33 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Update()
+    public void HandleUpdate()
     {
         Move(direction);
         if (isFacingRight && direction.x < 0 || (!isFacingRight && direction.x > 0))
         {
             Flip();
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Interact();
+        }
+
     }
 
     private void OnMove(InputValue moveVal)
     {
         Vector2 moveDirection = moveVal.Get<Vector2>();
         direction = moveDirection;
+    }
+
+    private void Interact() {
+        var collider = Physics2D.OverlapCircle(transform.position, 1f, interactableLayer);
+        if (collider != null)
+        {
+            collider.GetComponent<Interactables>()?.Interact();
+        }
     }
 
     private void Move(Vector2 dir)
@@ -60,13 +75,4 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-    }
 }

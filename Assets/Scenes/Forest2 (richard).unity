@@ -3851,7 +3851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &330464373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4083,6 +4083,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8758371, y: 0.36789858}
   m_EdgeRadius: 0
+--- !u!114 &340250066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340250060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc0137142a350242924e9ce414a9d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    lines:
+    - Hi I am a fox
+    - A foxy fox
 --- !u!1 &343955913
 GameObject:
   m_ObjectHideFlags: 0
@@ -5709,6 +5725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 545921487}
   - component: {fileID: 545921486}
+  - component: {fileID: 545921488}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -5744,6 +5761,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &545921488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545921485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d843101f931f38488b36155aa459eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 330464372}
+  dialogueText: {fileID: 725668513}
+  lettersPerSecond: 20
 --- !u!1001 &575577934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5905,7 +5937,7 @@ Transform:
   m_GameObject: {fileID: 595806942}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.30691433, y: 0.34821415, z: -10}
+  m_LocalPosition: {x: 0.30487537, y: 0.3481946, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31062,6 +31094,14 @@ PrefabInstance:
       propertyPath: startingPosition
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5352384107712198214, guid: 1e94c13dec08b4e8fa00c83531b4d1b3, type: 3}
+      propertyPath: Interactables.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352384107712198214, guid: 1e94c13dec08b4e8fa00c83531b4d1b3, type: 3}
+      propertyPath: interactableLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5393436429451824954, guid: 1e94c13dec08b4e8fa00c83531b4d1b3, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -33627,6 +33667,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fox
       objectReference: {fileID: 0}
+    - target: {fileID: 1419894557427044997, guid: c48d5fc138e98684a9bb640ef4e6ba4d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3054452026941765866, guid: c48d5fc138e98684a9bb640ef4e6ba4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.25
@@ -33690,6 +33734,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1419894557427044997, guid: c48d5fc138e98684a9bb640ef4e6ba4d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 340250061}
+    - targetCorrespondingSourceObject: {fileID: 1419894557427044997, guid: c48d5fc138e98684a9bb640ef4e6ba4d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 340250066}
     - targetCorrespondingSourceObject: {fileID: 1419894557427044997, guid: c48d5fc138e98684a9bb640ef4e6ba4d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 340250065}
