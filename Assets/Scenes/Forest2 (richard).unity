@@ -4166,6 +4166,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5129196200906774355, guid: 55744e23fe718d042bc0b0ced9563466, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129196200906774355, guid: 55744e23fe718d042bc0b0ced9563466, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1975292183
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5524,6 +5532,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5129196200906774355, guid: 55744e23fe718d042bc0b0ced9563466, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129196200906774355, guid: 55744e23fe718d042bc0b0ced9563466, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1975292183
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5617,7 +5633,7 @@ Transform:
   m_GameObject: {fileID: 595806942}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.285882, y: 0.3480153, z: -10}
+  m_LocalPosition: {x: 0.29355812, y: 0.3480878, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23969,6 +23985,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5129196200906774355, guid: 55744e23fe718d042bc0b0ced9563466, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129196200906774355, guid: 55744e23fe718d042bc0b0ced9563466, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1975292183
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28108,6 +28132,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5129196200906774355, guid: 55744e23fe718d042bc0b0ced9563466, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129196200906774355, guid: 55744e23fe718d042bc0b0ced9563466, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1975292183
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28176,6 +28208,14 @@ PrefabInstance:
     - target: {fileID: 4613073126854747180, guid: 55744e23fe718d042bc0b0ced9563466, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129196200906774355, guid: 55744e23fe718d042bc0b0ced9563466, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129196200906774355, guid: 55744e23fe718d042bc0b0ced9563466, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1975292183
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33543,7 +33583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 368207955436892529, guid: e6af2e7fdadfea34896c9e8769afd8bf, type: 3}
       propertyPath: dialogue.lines.Array.data[5]
-      value: Let me know if you need any help, I'll just be foxin around.
+      value: Let me know if you need any help, I'll be around.
       objectReference: {fileID: 0}
     - target: {fileID: 368207955436892529, guid: e6af2e7fdadfea34896c9e8769afd8bf, type: 3}
       propertyPath: dialogue.lines.Array.data[6]
