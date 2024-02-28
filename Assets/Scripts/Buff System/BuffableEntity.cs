@@ -13,6 +13,7 @@ public class BuffableEntity : MonoBehaviour
         
     }
     /*
+    
     // Update is called once per frame
     void Update()
     {
@@ -32,6 +33,6 @@ public class BuffableEntity : MonoBehaviour
             buff.Activate();
         }
     }
-
     */
+    
 }
