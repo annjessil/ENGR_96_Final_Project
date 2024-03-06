@@ -9,19 +9,19 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator anim;
-    [SerializeField] float speed = 15f;
+    [SerializeField] public float speed = 5f;
     Vector2 direction;
     bool isFacingRight = true;
     public LayerMask interactableLayer;
 
-    float speedBonus = 100f;
-    public VectorValue startingPosition;
+    float speedBonus = 10f;
+    //public VectorValue startingPosition;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        transform.position = startingPosition.initialValue; // null reference error 
+      //  transform.position = startingPosition.initialValue; // null reference error 
 
     }
 
@@ -74,15 +74,17 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        }  
 
 
-        if (collision.gameObject.tag == "Collectible")
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Collectable")
         {
-            speedBuff();
+            StartCoroutine(speedBuff());
         }
-
-
     }
 
 
@@ -90,8 +92,10 @@ public class PlayerController : MonoBehaviour
     IEnumerator speedBuff()
     {
         speed += speedBonus;
+        Debug.Log("before");
 
         yield return new WaitForSeconds(7);
+        Debug.Log("after");
 
         // Remove buff effects after duration
         speed -= speedBonus;
