@@ -153,8 +153,8 @@ MonoBehaviour:
   speed: 3
   patrolDestination: 1
   chaseSpeed: 30
-  chaseDistance: 3
-  loseDistance: 5
+  chaseDistance: 2
+  loseDistance: 4
   isChasing: 0
 --- !u!61 &6705829560950556128
 BoxCollider2D:
