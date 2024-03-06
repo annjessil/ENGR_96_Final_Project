@@ -8065,7 +8065,7 @@ Transform:
   m_GameObject: {fileID: 671922922}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.189619, y: -14.8824005, z: -10}
+  m_LocalPosition: {x: -15.2671795, y: -14.88546, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39799,7 +39799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9143954451622757390, guid: 86a975eb09e5d12459920b553114ac75, type: 3}
       propertyPath: m_Name
-      value: Bone
+      value: BadCollectible_Bone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -39822,6 +39822,6 @@ SceneRoots:
   - {fileID: 7896539292195306414}
   - {fileID: 376844162}
   - {fileID: 1758487718}
-  - {fileID: 557414037}
   - {fileID: 8847741386148939129}
+  - {fileID: 557414037}
   - {fileID: 1758026371}
