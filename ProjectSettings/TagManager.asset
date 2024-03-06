@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Collectable
   - Interactable
+  - Collectable_Speed
   layers:
   - Default
   - TransparentFX

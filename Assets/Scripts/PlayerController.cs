@@ -9,17 +9,19 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator anim;
-    [SerializeField] float speed = 5f;
+    [SerializeField] float speed = 15f;
     Vector2 direction;
     bool isFacingRight = true;
     public LayerMask interactableLayer;
-    public VectorValue startingPosition;
+
+    float speedBonus = 100f;
+    //public VectorValue startingPosition;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        transform.position = startingPosition.initialValue; // null reference error 
+       // transform.position = startingPosition.initialValue; // null reference error 
 
     }
 
@@ -73,6 +75,28 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+
+        if (collision.gameObject.tag == "Collectible")
+        {
+            speedBuff();
+        }
+
+
     }
+
+
+
+    IEnumerator speedBuff()
+    {
+        speed += speedBonus;
+
+        yield return new WaitForSeconds(7);
+
+        // Remove buff effects after duration
+        speed -= speedBonus;
+
+    }
+
 
 }
