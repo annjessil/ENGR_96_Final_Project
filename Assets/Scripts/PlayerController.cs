@@ -13,16 +13,20 @@ public class PlayerController : MonoBehaviour
     Vector2 direction;
     bool isFacingRight = true;
     public LayerMask interactableLayer;
+    float badSpeedBonusRange, goodSpeedBonusRange;
 
-    float speedBonus = 10f;
+    
+
+
     //public VectorValue startingPosition;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-      //  transform.position = startingPosition.initialValue; // null reference error 
-
+        //  transform.position = startingPosition.initialValue; // null reference error 
+        //speed Buff
+        
     }
 
     // Update is called once per frame
@@ -81,15 +85,23 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        badSpeedBonusRange = Random.Range(-15f, -4f);
+        goodSpeedBonusRange = Random.Range(1f, 10f);
+
         if (collision.gameObject.tag == "Collectable")
         {
-            StartCoroutine(speedBuff());
+            StartCoroutine(speedBuff(goodSpeedBonusRange));
+        }
+
+        if (collision.gameObject.tag == "BadCollectable")
+        {
+            StartCoroutine(speedBuff(badSpeedBonusRange));
         }
     }
 
 
 
-    IEnumerator speedBuff()
+    IEnumerator speedBuff(float speedBonus)
     {
         speed += speedBonus;
         Debug.Log("before");
