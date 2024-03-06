@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        transform.position = startingPosition.initialValue;
+        transform.position = startingPosition.initialValue; // null reference error 
 
     }
 
