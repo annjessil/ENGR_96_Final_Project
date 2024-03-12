@@ -10,6 +10,7 @@ TagManager:
   - Interactable
   - Collectable_Speed
   - BadCollectable
+  - Door
   layers:
   - Default
   - TransparentFX
