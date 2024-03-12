@@ -97,11 +97,6 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(speedBuff(badSpeedBonusRange));
         }
-
-        if (collision.gameObject.tag == "Door")
-        {
-            SceneManager.LoadScene("Kaylen's Scene");
-        }
     }
 
 

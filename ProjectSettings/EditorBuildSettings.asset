@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Forest3 (richard).unity
     guid: bb06f7908970b4e46b908bcbcd73f1a7
   - enabled: 1
+    path: Assets/Scenes/Annmarie's Scene.unity
+    guid: 4cadb1829049446b5aef47c0d81c8ba9
+  - enabled: 1
     path: Assets/Scenes/Kaylen's Scene.unity
     guid: 4db1bb8c2bc5b024488d60ad2019909a
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 31977b8cd3cea5c42b7423b0725ceb5a
   m_configObjects: {}
