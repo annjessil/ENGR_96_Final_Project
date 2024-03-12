@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        badSpeedBonusRange = Random.Range(-15f, -4f);
+        badSpeedBonusRange = Random.Range(-4f, -1f);
         goodSpeedBonusRange = Random.Range(1f, 10f);
 
         if (collision.gameObject.tag == "Collectable")

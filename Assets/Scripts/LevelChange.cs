@@ -7,13 +7,13 @@ public class LevelChange : MonoBehaviour
 {
     public int sceneBuildIndex;
     public Vector2 playerPosition;
-    public VectorValue playerStorage;
+    //public VectorValue playerStorage;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            playerStorage.initialValue = playerPosition;
+          //  playerStorage.initialValue = playerPosition;
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
         }
     }
