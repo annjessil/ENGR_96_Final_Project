@@ -1159,8 +1159,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.24905, y: -0.039399996, z: 0}
-    m_Extent: {x: 0.50755, y: 0.5055, z: 0}
+    m_Center: {x: 0.24925001, y: -0.039650008, z: 0}
+    m_Extent: {x: 0.50845003, y: 0.50535, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6790,8 +6790,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.24825, y: -0.039049998, z: 0}
-    m_Extent: {x: 0.50785, y: 0.50475, z: 0}
+    m_Center: {x: 0.24854998, y: -0.04034999, z: 0}
+    m_Extent: {x: 0.50775, y: 0.50475, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -27410,8 +27410,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.24905, y: -0.039200008, z: 0}
-    m_Extent: {x: 0.50755, y: 0.5044, z: 0}
+    m_Center: {x: 0.24849999, y: -0.040000007, z: 0}
+    m_Extent: {x: 0.5082, y: 0.5036, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -37110,19 +37110,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2773289121447661607, guid: 9f6a4eb041f70a84285d3e3f5c938b91, type: 3}
       propertyPath: m_Size.x
-      value: 1.7477932
+      value: 2.077074
       objectReference: {fileID: 0}
     - target: {fileID: 2773289121447661607, guid: 9f6a4eb041f70a84285d3e3f5c938b91, type: 3}
       propertyPath: m_Size.y
-      value: 0.85087967
+      value: 1.1472301
       objectReference: {fileID: 0}
     - target: {fileID: 2773289121447661607, guid: 9f6a4eb041f70a84285d3e3f5c938b91, type: 3}
       propertyPath: m_Offset.x
-      value: 0.5361643
+      value: 0.5526285
       objectReference: {fileID: 0}
     - target: {fileID: 2773289121447661607, guid: 9f6a4eb041f70a84285d3e3f5c938b91, type: 3}
       propertyPath: m_Offset.y
-      value: 0.074560165
+      value: 0.041632652
       objectReference: {fileID: 0}
     - target: {fileID: 2854565491898132364, guid: 9f6a4eb041f70a84285d3e3f5c938b91, type: 3}
       propertyPath: m_LocalPosition.x
