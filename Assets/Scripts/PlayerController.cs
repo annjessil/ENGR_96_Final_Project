@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator anim;
-    [SerializeField] public float speed = 5f;
+    [SerializeField] public float speed = 6f;
     Vector2 direction;
     bool isFacingRight = true;
     public LayerMask interactableLayer;
@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        badSpeedBonusRange = Random.Range(-4f, -1f);
+        badSpeedBonusRange = Random.Range(-5f, -1f);
         goodSpeedBonusRange = Random.Range(1f, 10f);
 
         if (collision.gameObject.tag == "Collectable")
@@ -103,14 +103,19 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator speedBuff(float speedBonus)
     {
-        speed += speedBonus;
-        Debug.Log("before");
 
-        yield return new WaitForSeconds(7);
-        Debug.Log("after");
+        if (!((speed + speedBonus) < 1)) // makes sure speed isn't negative
+        {
+            speed += speedBonus;
+            Debug.Log("before");
 
-        // Remove buff effects after duration
-        speed -= speedBonus;
+            yield return new WaitForSeconds(7);
+            Debug.Log("after");
+
+            // Remove buff effects after duration
+            speed -= speedBonus;
+        }
+        
 
     }
 
