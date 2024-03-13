@@ -27953,7 +27953,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     lines:
-    - spider
+    - sup
+    - woah woah woah
+    - back up homie, don't make me bite you
 --- !u!95 &1011474478
 Animator:
   serializedVersion: 5
@@ -114216,9 +114218,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     lines:
-    - tree tree tree... I am a tree
-    - hmph!
-    - I'm not short... just vertically challenged...
+    - hello! I am a tree
+    - I'm pretty short aren't I?
+    - (the tree makes some sad tree noises)
     - (the tree is... crying...?)
     - (you walk away slowly...)
 --- !u!50 &1545828164
@@ -119656,7 +119658,7 @@ Transform:
   m_GameObject: {fileID: 1987228265}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.98783, y: -21.662542, z: -10}
+  m_LocalPosition: {x: 54.99347, y: -21.662663, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
