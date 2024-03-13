@@ -15,17 +15,13 @@ public class PlayerController : MonoBehaviour
     public LayerMask interactableLayer;
     float badSpeedBonusRange, goodSpeedBonusRange;
 
-    
-
-
-    //public VectorValue startingPosition;
+    public VectorValue startingPosition;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        //  transform.position = startingPosition.initialValue; // null reference error 
-        //speed Buff
+        transform.position = startingPosition.initialValue; // null reference error 
         
     }
 

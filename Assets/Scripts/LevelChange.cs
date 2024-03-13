@@ -12,12 +12,13 @@ public class LevelChange : MonoBehaviour
     public Vector2 playerPosition;
     public float transitionTime = 1f;
 
-    //public VectorValue playerStorage;
+    public VectorValue playerStorage;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
+            playerStorage.initialValue = playerPosition;
             StartCoroutine(LoadLevel(sceneBuildIndex));
         }
     }
