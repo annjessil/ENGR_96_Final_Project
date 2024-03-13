@@ -90,4 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c50e24d8c4ecd45b15b5288ea9da8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 0}
   sceneBuildIndex: 2
+  playerPosition: {x: 0, y: 0}
+  transitionTime: 1
+  playerStorage: {fileID: 11400000, guid: 8f717e799f18a904ebf67b6ad87e56be, type: 2}

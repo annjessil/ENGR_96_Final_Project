@@ -176,8 +176,8 @@ MonoBehaviour:
   speed: 5
   interactableLayer:
     serializedVersion: 2
-    m_Bits: 0
-  startingPosition: {fileID: 0}
+    m_Bits: 64
+  startingPosition: {fileID: 11400000, guid: 8f717e799f18a904ebf67b6ad87e56be, type: 2}
 --- !u!114 &-520417249460211273
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15094,11 +15094,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5274058192213212289, guid: 512e634c0b87c7c4cbf7437e3ac209a1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 57.26
+      value: 57.31
       objectReference: {fileID: 0}
     - target: {fileID: 5274058192213212289, guid: 512e634c0b87c7c4cbf7437e3ac209a1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -21.83
+      value: -23.09
       objectReference: {fileID: 0}
     - target: {fileID: 5274058192213212289, guid: 512e634c0b87c7c4cbf7437e3ac209a1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15273,6 +15273,14 @@ PrefabInstance:
     - target: {fileID: 7180740056943679414, guid: 9f6a4eb041f70a84285d3e3f5c938b91, type: 3}
       propertyPath: sceneBuildIndex
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180740056943679414, guid: 9f6a4eb041f70a84285d3e3f5c938b91, type: 3}
+      propertyPath: playerPosition.x
+      value: -8.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180740056943679414, guid: 9f6a4eb041f70a84285d3e3f5c938b91, type: 3}
+      propertyPath: playerPosition.y
+      value: 8.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27945,7 +27953,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     lines:
-    - spider
+    - sup
+    - woah woah woah
+    - back up homie, don't make me bite you
 --- !u!95 &1011474478
 Animator:
   serializedVersion: 5
@@ -75898,6 +75908,14 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 1541526511}
+    - target: {fileID: 7180740056943679414, guid: 9f6a4eb041f70a84285d3e3f5c938b91, type: 3}
+      propertyPath: playerPosition.x
+      value: 20.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180740056943679414, guid: 9f6a4eb041f70a84285d3e3f5c938b91, type: 3}
+      propertyPath: playerPosition.y
+      value: -1.13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -114200,9 +114218,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     lines:
-    - tree tree tree... I am a tree
-    - hmph!
-    - I'm not short... just vertically challenged...
+    - hello! I am a tree
+    - I'm pretty short aren't I?
+    - (the tree makes some sad tree noises)
     - (the tree is... crying...?)
     - (you walk away slowly...)
 --- !u!50 &1545828164
@@ -114619,6 +114637,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5352384107712198214, guid: 1e94c13dec08b4e8fa00c83531b4d1b3, type: 3}
+      propertyPath: startingPosition
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f717e799f18a904ebf67b6ad87e56be, type: 2}
+    - target: {fileID: 5352384107712198214, guid: 1e94c13dec08b4e8fa00c83531b4d1b3, type: 3}
       propertyPath: interactableLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -114636,11 +114658,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5393436429451824954, guid: 1e94c13dec08b4e8fa00c83531b4d1b3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 57.26
+      value: 57.31
       objectReference: {fileID: 0}
     - target: {fileID: 5393436429451824954, guid: 1e94c13dec08b4e8fa00c83531b4d1b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -21.83
+      value: -23.09
       objectReference: {fileID: 0}
     - target: {fileID: 5393436429451824954, guid: 1e94c13dec08b4e8fa00c83531b4d1b3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -119560,6 +119582,7 @@ GameObject:
   - component: {fileID: 1987228267}
   - component: {fileID: 1987228266}
   - component: {fileID: 1987228269}
+  - component: {fileID: 1987228270}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -119635,7 +119658,7 @@ Transform:
   m_GameObject: {fileID: 1987228265}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.977997, y: -21.662333, z: -10}
+  m_LocalPosition: {x: 54.99347, y: -21.662663, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -119675,6 +119698,50 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1987228270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987228265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &1989552170
 GameObject:
   m_ObjectHideFlags: 0
