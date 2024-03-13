@@ -152,7 +152,7 @@ MonoBehaviour:
   patrolPoints: []
   speed: 3
   patrolDestination: 1
-  chaseSpeed: 30
+  chaseSpeed: 9
   chaseDistance: 2
   loseDistance: 4
   isChasing: 0
